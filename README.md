@@ -31,12 +31,6 @@ MIUI / HyperOS 会拦截后台服务直接拉起 Activity（即使授予「后�
 
 磁贴通过 `startActivityAndCollapse()` 启动透明中转页，此时应用已处于前台状态，再由中转页调用 `startActivity()` 即可绕过系统的后台启动限制。中转页无 UI 且 `excludeFromRecents`，用户无感知。
 
-目标应用按以下顺序查找，覆盖包名变体：
-
-1. 标准包名 `com.kookong.app`
-2. 包名包含 `kookong` 的应用
-3. 应用名包含「酷控」或 `kookong` 的应用
-
 ## 兼容性
 
 - 最低支持 Android 8.0（API 26），目标版本 Android 14（API 34）
@@ -54,7 +48,7 @@ MIUI / HyperOS 会拦截后台服务直接拉起 Activity（即使授予「后�
 ./gradlew assembleRelease
 ```
 
-`keystore.properties` 格式（该文件及 `keystore/` 目录已被 gitignore，不会提交）：
+`keystore.properties` 格式：
 
 ```properties
 storeFile=keystore/your-keystore.jks
