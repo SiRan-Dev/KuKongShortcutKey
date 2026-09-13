@@ -44,7 +44,7 @@ MIUI / HyperOS 会拦截后台服务直接拉起 Activity（即使授予「后�
 
 ## 自行构建
 
-环境要求：JDK 17+，Android SDK 34。
+环境要求：JDK 17+，Android SDK 37（Gradle Wrapper 会自动拉取对应版本的 Gradle）。
 
 ```bash
 # Debug 构建（无需签名配置）

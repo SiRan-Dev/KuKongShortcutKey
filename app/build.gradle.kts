@@ -3,7 +3,6 @@ import java.util.Properties
 
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
 }
 
 val keystoreProperties = Properties()
@@ -14,12 +13,12 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     namespace = "com.sirandev.kukongshortcutkey"
-    compileSdk = 34
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.sirandev.kukongshortcutkey"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = 37
         versionCode = 5
         versionName = "1.4"
     }
@@ -47,9 +46,5 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
-    }
-
-    kotlinOptions {
-        jvmTarget = "17"
     }
 }
